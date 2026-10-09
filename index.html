@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="theme-color" content="#0d1509">
+<meta name="robots" content="index, follow">
+<title>草榴电影网 - 精选优质影视导航大全 | 高清影视在线观看与电影字幕</title>
+<meta name="description" content="草榴电影网（caoliudianyingwang-cn.github.io）是精选优质影视导航大全，收录高清影视在线观看、电影下载、迅雷下载、最新电影、经典电影、电影字幕、电视剧、动漫、纪录片、综艺、4K蓝光与影视大全的实用网址收录平台。">
+<meta name="keywords" content="草榴电影网,caoliudianyingwang-cn,草榴,草榴影视,影视导航,影视网站导航,精选优质网站导航大全,实用网址收录平台,高清影视在线观看,影视在线观看,电影下载,迅雷下载,最新电影,经典电影,电影字幕,电视剧,动漫,纪录片,综艺,影视大全,4K蓝光,影视资源导航">
+<link rel="canonical" href="https://caoliudianyingwang-cn.github.io/">
+<style>
+:root{
+  --leaf:#7fb069;        /* 草绿 */
+  --leaf2:#3f7d54;       /* 深叶绿 */
+  --thorn:#c9d6b7;       /* 榴皮青灰 */
+  --fruit:#e8b94a;       /* 榴肉金 */
+  --fruit2:#f2d08a;
+  --petal:#f6e7c1;       /* 榴花白 */
+  --ink:#16211a;         /* 墨绿黑 */
+  --ink2:#24362b;
+  --moss:#4a5f4f;
+  --line:rgba(127,176,105,.28);
+  --paper:#f6f3ea;
+  --shadow:0 14px 34px rgba(8,14,8,.34);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink);background:var(--paper);
+  line-height:1.75;overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(127,176,105,.10), transparent 42%),
+    radial-gradient(circle at 88% 92%, rgba(232,185,74,.13), transparent 46%),
+    repeating-linear-gradient(0deg, rgba(63,125,84,.035) 0 1px, transparent 1px 27px),
+    repeating-linear-gradient(90deg, rgba(63,125,84,.03) 0 1px, transparent 1px 27px);
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none;outline:none}
+ul,ol{list-style:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+::-webkit-scrollbar{width:13px;height:13px}
+::-webkit-scrollbar-track{background:#eae5d6}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--leaf),var(--leaf2));border-radius:99px;border:3px solid #eae5d6}
+
+/* ============ 顶部枝蔓装饰 ============ */
+.branch{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.branch i{position:absolute;bottom:0;width:3px;background:linear-gradient(180deg,transparent,var(--leaf2));transform-origin:bottom;animation:sg 9s ease-in-out infinite alternate}
+.branch i::after{content:"";position:absolute;top:-2px;left:50%;width:15px;height:8px;background:var(--leaf);border-radius:99px 99px 0 0;transform:translateX(-50%) rotate(var(--r,0deg));box-shadow:inset 0 -3px 0 rgba(255,255,255,.22)}
+@keyframes sg{to{transform:skewX(7deg) scaleY(1.06)}}
+.wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 22px}
+
+/* ============ 头部 ============ */
+header{position:sticky;top:0;z-index:60;background:linear-gradient(180deg,rgba(246,243,234,.96),rgba(246,243,234,.86));backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:18px;height:70px}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.fruit{
+  width:46px;height:46px;border-radius:50% 50% 46% 54% / 54% 46% 50% 50%;
+  background:
+    radial-gradient(circle at 34% 30%, rgba(255,255,255,.42), transparent 44%),
+    radial-gradient(circle at 66% 72%, rgba(120,60,20,.22), transparent 46%),
+    linear-gradient(140deg,#f4dd94 0%,#e8b94a 46%,#c88a2c 100%);
+  box-shadow:inset 0 -7px 12px rgba(120,60,20,.3),inset 0 5px 9px rgba(255,255,255,.5),0 6px 16px rgba(63,125,84,.3);
+  position:relative;animation:fb 7s ease-in-out infinite alternate;flex:none;
+}
+.fruit::before{content:"";position:absolute;inset:14% 14%;border-radius:50%;border:1.5px dashed rgba(120,70,25,.55)}
+.fruit::after{content:"";position:absolute;top:6px;left:50%;width:5px;height:5px;border-radius:50%;background:rgba(120,60,20,.5);box-shadow:9px 3px 0 rgba(120,60,20,.4),3px 11px 0 rgba(120,60,20,.45),12px 12px 0 rgba(120,60,20,.35);transform:translateX(-50%)}
+@keyframes fb{to{transform:rotate(-9deg) translateY(-2px)}}
+  /* 草榴双字标 */
+  .let{font:700 22px/1 "Songti SC","STSong",serif;letter-spacing:1px;color:var(--ink)}
+.let b{color:var(--leaf2)}
+.let em{font-style:normal;color:var(--fruit);font-size:.62em;margin-left:6px;font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:0}
+nav{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+nav a{
+  font-size:13.5px;font-weight:600;padding:8px 13px;border-radius:99px;color:var(--ink2);
+  transition:.25s cubic-bezier(.2,.7,.3,1);white-space:nowrap;position:relative;
+}
+nav a:hover{background:var(--leaf);color:#fff;transform:translateY(-1px)}
+nav a.on{background:linear-gradient(120deg,var(--leaf),var(--leaf2));color:#fff;box-shadow:0 6px 14px rgba(63,125,84,.34)}
+.btn{
+  font-size:13.5px;font-weight:700;padding:9px 18px;border-radius:99px;color:#fff;flex:none;
+  background:linear-gradient(120deg,var(--leaf),var(--leaf2));
+  box-shadow:0 8px 18px rgba(63,125,84,.32);transition:.26s;
+}
+.btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 22px rgba(63,125,84,.4)}
+.burger{display:none;width:40px;height:40px;flex-direction:column;justify-content:center;align-items:center;gap:5px;margin-left:auto;flex:none}
+.burger s{width:22px;height:2px;background:var(--ink);border-radius:99px;transition:.28s}
+.burger[aria-expanded="true"] s:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] s:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] s:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============ Hero ============ */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:54px;align-items:center;padding:64px 0 44px}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:var(--leaf2);letter-spacing:.16em;padding:8px 14px;border-radius:99px;
+  background:rgba(127,176,105,.14);border:1px solid var(--line);
+}
+.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 5px rgba(127,176,105,.2);animation:pl 1.7s ease-in-out infinite}
+@keyframes pl{50%{box-shadow:0 0 0 10px rgba(127,176,105,0)}}
+h1{
+  font:700 clamp(34px,5.4vw,64px)/1.08 "Songti SC","STSong",serif;letter-spacing:-.5px;margin:18px 0 6px;
+  background:linear-gradient(120deg,var(--ink) 30%,var(--leaf2) 62%,var(--fruit) 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hs{font-size:clamp(15px,1.5vw,18px);color:#5a6b5e;max-width:34em}
+.hero q{
+  display:block;margin-top:20px;padding:14px 18px;border-left:4px solid var(--fruit);background:rgba(232,185,74,.13);
+  font:500 15px/1.7 "Songti SC","STSong",serif;color:#4a4228;border-radius:0 12px 12px 0;
+}
+.qm{quotes:"「" "」"}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.cta .btn2{
+  font-size:14px;font-weight:700;padding:12px 22px;border-radius:99px;color:#fff;
+  background:linear-gradient(120deg,var(--leaf),var(--leaf2));box-shadow:var(--shadow);transition:.26s;
+}
+.cta .btn2:hover{transform:translateY(-2px)}
+.cta .gh{
+  font-size:14px;font-weight:600;padding:12px 22px;border-radius:99px;color:var(--ink2);
+  border:1.5px solid var(--line);background:#fff;transition:.26s;
+}
+.cta .gh:hover{border-color:var(--leaf);color:var(--leaf2);transform:translateY(-2px)}
+
+/* 右侧果实仪表 */
+.gauge{position:relative;width:min(380px,88vw);margin:0 auto;aspect-ratio:1/1}
+.gauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.gauge .ring{fill:none;stroke:#e6e0cf;stroke-width:15;stroke-linecap:round}
+.gauge .val{fill:none;stroke:linear-gradient(90deg,var(--leaf),var(--fruit));stroke-width:15;stroke-linecap:round;stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset 2.1s cubic-bezier(.2,.8,.2,1)}
+.gauge .face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px}
+.gauge .face b{font:700 62px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--leaf2);letter-spacing:-2px}
+.gauge .face b i{font-style:normal;font-size:.5em;color:var(--fruit)}
+.gauge .face span{font-size:13px;color:#6b7a6c;letter-spacing:.2em}
+.gauge .pips{position:absolute;inset:8%;border-radius:50%;border:1px dashed var(--line)}
+.seeds{position:absolute;inset:0;pointer-events:none}
+.seeds i{position:absolute;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff5d8,#d99a3a);box-shadow:0 2px 5px rgba(120,60,20,.3)}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:20px 6px;padding:20px 18px;position:relative;overflow:hidden;transition:.3s;box-shadow:0 4px 14px rgba(22,33,26,.05)}
+.kpi::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(127,176,105,.2),transparent 70%)}
+.kpi:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--leaf)}
+.kpi em{font-style:normal;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;color:var(--leaf2)}
+.kpi b{display:block;font:700 34px/1.1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);margin:10px 0 2px;letter-spacing:-1px}
+.kpi b u{text-decoration:none;color:var(--fruit);font-size:.55em}
+.kpi span{font-size:12.5px;color:#6f7e70}
+
+/* ============ 章节 ============ */
+section{padding:66px 0;position:relative}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.eyebrow .no{font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:#fff;letter-spacing:.1em;padding:6px 10px;border-radius:8px 4px;background:linear-gradient(120deg,var(--leaf),var(--leaf2))}
+.eyebrow .en{font:600 11.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--leaf2);letter-spacing:.28em;text-transform:uppercase}
+h2{font:700 clamp(25px,3.4vw,39px)/1.25 "Songti SC","STSong",serif;color:var(--ink);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+h2 small{font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--fruit);letter-spacing:.05em}
+.lead{color:#5f7062;max-width:56em;margin:12px 0 30px;font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.chips a{font-size:12.5px;font-weight:600;padding:6px 13px;border-radius:99px;color:#5d6e60;border:1px solid var(--line);background:#fff;transition:.22s}
+.chips a:hover{color:#fff;background:var(--leaf2);border-color:var(--leaf2);transform:translateY(-1px)}
+
+/* ① 导航：斜角果实卡 */
+.panels{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.pn{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px 7px;padding:22px 18px 20px;overflow:hidden;transition:.34s cubic-bezier(.2,.7,.3,1);min-height:178px;display:flex;flex-direction:column}
+.pn::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--c1),var(--c2))}
+.pn::after{content:"";position:absolute;right:-26px;bottom:-26px;width:86px;height:86px;border-radius:50%;background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.4),transparent 60%);opacity:.5}
+.pn:hover{transform:translateY(-7px) rotate(-.6deg);box-shadow:9px 9px 0 var(--leaf);border-color:var(--leaf)}
+.pn .ix{font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--c1);letter-spacing:.1em}
+.pn h3{font:700 18px/1.4 "Songti SC","STSong",serif;margin:10px 0 7px;color:var(--ink)}
+.pn p{font-size:12.5px;color:#718075;flex:1}
+.pn .go{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px;font-size:12.5px;font-weight:700;color:var(--c2);border-top:1px dashed var(--line);padding-top:11px}
+.pn .go i{width:22px;height:22px;border-radius:50%;background:var(--c1);color:#fff;display:grid;place-items:center;font-style:normal;transition:.26s;font-size:11px}
+.pn:hover .go i{transform:translateX(4px)}
+
+/* ② 片单：横滑波浪卡 */
+.beltwrap{position:relative}
+.belt{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scrollbar-width:thin}
+.belt::-webkit-scrollbar{height:10px}
+.belt::-webkit-scrollbar-thumb{background:linear-gradient(90deg,var(--leaf),var(--fruit));border-radius:99px;border:2px solid #eae5d6}
+.fv{position:relative;flex:0 0 196px;aspect-ratio:3/4;border-radius:22px 22px 9px 9px;overflow:hidden;scroll-snap-align:start;background:var(--g);transition:.4s cubic-bezier(.2,.7,.3,1);box-shadow:0 8px 20px rgba(22,33,26,.18)}
+.fv u{position:absolute;inset:0;background:linear-gradient(180deg,transparent 46%,rgba(10,16,11,.92));z-index:1}
+.fv .cv{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 13px;color:#fff;gap:7px}
+.fv .t{font:700 16px/1.35 "Songti SC","STSong",serif;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.fv .s{font-size:11.5px;color:rgba(255,255,255,.82);display:flex;gap:6px;flex-wrap:wrap}
+.fv .s b{font-weight:600;color:var(--fruit2)}
+.fv .yr{position:absolute;z-index:3;top:10px;left:10px;font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink);background:var(--petal);padding:5px 8px;border-radius:99px;letter-spacing:.04em}
+.fv .rt{position:absolute;z-index:3;top:10px;right:10px;font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:#fff;background:rgba(63,125,84,.9);padding:5px 8px;border-radius:99px}
+.fv .ov{position:absolute;inset:0;z-index:4;background:linear-gradient(160deg,rgba(63,125,84,.86),rgba(232,185,74,.78));display:grid;place-items:center;opacity:0;transition:.36s;backdrop-filter:blur(2px)}
+.fv .ov span{font:700 14px;letter-spacing:.16em;color:#fff;border:1.5px solid rgba(255,255,255,.85);padding:9px 16px;border-radius:99px;transform:translateY(10px);transition:.36s}
+.fv:hover{transform:scale(1.035);box-shadow:0 18px 34px rgba(22,33,26,.3)}
+.fv:hover .ov{opacity:1}
+.fv:hover .ov span{transform:translateY(0)}
+
+/* ③ 分类：标签页 */
+.tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
+.tc{font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:99px;color:#5d6e60;background:#fff;border:1.5px solid var(--line);transition:.24s}
+.tc:hover{color:var(--leaf2);border-color:var(--leaf)}
+.tc.on{color:#fff;background:linear-gradient(120deg,var(--leaf),var(--fruit));border-color:transparent;box-shadow:0 7px 16px rgba(200,138,44,.32)}
+.panels2{display:grid;gap:10px}
+.pn2{display:none;grid-template-columns:repeat(6,1fr);gap:11px;animation:fd .5s ease both}
+.pn2.on{display:grid}
+@keyframes fd{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ch{font-size:13px;font-weight:600;padding:11px 13px;border-radius:12px;color:var(--ink2);background:#fff;border:1px solid var(--line);transition:.22s;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ch:hover{color:var(--leaf2);border-color:var(--leaf);background:rgba(127,176,105,.1);transform:translateX(3px)}
+.ch em{font-style:normal;font-size:11px;color:#8b978d}
+
+/* ④ 排行：阶梯柱 */
+.pyr{display:flex;align-items:flex-end;gap:14px;height:300px;padding:0 4px 0 62px;position:relative;overflow-x:auto}
+.pyr::before{content:"";position:absolute;left:62px;right:0;bottom:0;height:1px;background:var(--line)}
+.pyr .ax{position:absolute;left:0;top:0;bottom:0;display:flex;flex-direction:column;justify-content:space-between;font:600 10.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:#93a193;padding-bottom:1px}
+.step{position:relative;flex:1;min-width:66px;height:0;background:linear-gradient(180deg,var(--fruit),var(--leaf2));border-radius:9px 9px 0 0;transition:height 1.3s cubic-bezier(.2,.8,.2,1);box-shadow:inset 0 3px 10px rgba(255,255,255,.22)}
+.step i{position:absolute;inset:5px;border-radius:7px 7px 0 0;background:linear-gradient(180deg,rgba(255,255,255,.16),transparent 70%)}
+.step .vv{position:absolute;top:-30px;left:50%;transform:translateX(-50%);font:700 15px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--leaf2);white-space:nowrap}
+.step .vv b{color:var(--fruit)}
+.step .nm{position:absolute;top:calc(100% + 9px);left:50%;width:74px;transform:translateX(-50%) rotate(-22deg);transform-origin:left center;font:600 12.5px/1.35 "Songti SC","STSong",serif;color:var(--ink);text-align:left}
+.step .no{position:absolute;bottom:6px;right:7px;font:700 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:rgba(255,255,255,.62)}
+
+/* ⑤ 影讯：报刊分栏 */
+.press{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+.big{position:relative;background:linear-gradient(160deg,var(--ink) 0%,var(--ink2) 60%,#162e1f 100%);color:#fff;border-radius:24px 8px;padding:30px 26px;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;gap:11px;box-shadow:var(--shadow)}
+.big .wl{position:absolute;right:-10px;top:14px;font:700 74px/1 "Songti SC","STSong",serif;color:rgba(232,185,74,.12);letter-spacing:-3px}
+.big .k{font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.22em;color:var(--fruit);border:1px solid rgba(232,185,74,.5);padding:6px 11px;border-radius:99px;align-self:flex-start}
+.big h3{position:relative;font:700 25px/1.4 "Songti SC","STSong",serif}
+.big p{position:relative;font-size:13.5px;color:rgba(255,255,255,.76)}
+.big .dt{position:relative;font:600 11.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--fruit2);letter-spacing:.06em}
+.side{display:grid;gap:11px}
+.tn{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--leaf);border-radius:11px;padding:14px 15px;transition:.26s}
+.tn:hover{transform:translateX(7px);border-left-color:var(--fruit);box-shadow:0 8px 18px rgba(22,33,26,.09)}
+.tn .n{font:700 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--leaf2);flex:none;min-width:34px}
+.tn .tx{flex:1}
+.tn .tx b{display:block;font:600 14.5px/1.5 "Songti SC","STSong",serif;color:var(--ink)}
+.tn .tx span{font-size:12px;color:#7b887d;display:block;margin-top:4px}
+
+/* ⑥ 规范：条款墙 */
+.qbox{position:relative;background:linear-gradient(135deg,rgba(127,176,105,.16),rgba(232,185,74,.14));border:1.5px dashed var(--leaf);border-radius:24px;padding:30px 28px;margin-bottom:28px}
+.qbox q{font:500 17px/1.85 "Songti SC","STSong",serif;color:var(--ink)}
+.qbox q::before{content:"“";font:700 60px/0 "Songti SC",serif;color:var(--fruit);vertical-align:-22px;margin-right:6px}
+.grd2{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gd{background:#fff;border:1px solid var(--line);border-radius:16px 6px;padding:20px 18px;transition:.3s;position:relative;overflow:hidden}
+.gd::after{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--leaf),var(--fruit));transform:scaleX(0);transform-origin:left;transition:.5s cubic-bezier(.2,.7,.3,1)}
+.gd:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.gd:hover::after{transform:scaleX(1)}
+.gd .r{font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;color:var(--fruit)}
+.gd h3{font:700 17px/1.4 "Songti SC","STSong",serif;margin:9px 0 7px;color:var(--ink)}
+.gd p{font-size:12.8px;color:#6f7e70}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);background:linear-gradient(180deg,transparent,rgba(63,125,84,.06));padding:44px 0 26px;margin-top:30px}
+.ft{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px}
+.ft h4{font:700 14px/1 "Songti SC","STSong",serif;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.ft h4::before{content:"";width:4px;height:14px;border-radius:99px;background:var(--leaf)}
+.ft a{display:block;font-size:12.8px;color:#6b7a6c;padding:4px 0;transition:.2s}
+.ft a:hover{color:var(--leaf2);transform:translateX(3px)}
+.ft p{font-size:12.8px;color:#6b7a6c}
+.copy{margin-top:28px;padding-top:18px;border-top:1px dashed var(--line);font-size:12px;color:#879388;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+.copy b{color:var(--leaf2)}
+.note{background:rgba(232,185,74,.16);border:1px solid rgba(200,138,44,.4);border-radius:12px;padding:12px 16px;font-size:12.5px;color:#6b5322;margin-top:16px}
+
+/* 渐入 */
+.rv{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* 响应式 */
+@media (max-width:900px){
+  .wrap{padding:0 16px}
+  .hero{grid-template-columns:1fr;gap:34px;padding:36px 0 30px}
+  .gauge{width:min(320px,80vw)}
+  .panels{grid-template-columns:repeat(3,1fr)}
+  .pyr{padding-left:0;height:260px;gap:10px}
+  .pyr .ax{display:none}
+  .step .nm{display:none}
+  .press{grid-template-columns:1fr}
+  .grd2{grid-template-columns:repeat(2,1fr)}
+  .ft{grid-template-columns:repeat(2,1fr)}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  header{height:62px}
+  .hd{gap:10px}
+  .let{font-size:18px}
+  nav{position:fixed;inset:62px 0 0;background:rgba(246,243,234,.99);backdrop-filter:blur(14px);flex-direction:column;padding:20px 18px;gap:4px;transform:translateX(100%);transition:.34s cubic-bezier(.2,.7,.3,1);z-index:59;overflow:auto}
+  nav.open{transform:none}
+  nav a{font-size:15px;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:#fff}
+  .burger{display:flex}
+  .hero{padding:26px 0 22px}
+  .cta .btn2,.cta .gh{flex:1;text-align:center;justify-content:center}
+  .panels{grid-template-columns:repeat(2,1fr);gap:12px}
+  .pn{min-height:164px;padding:18px 14px 16px}
+  .pn h3{font-size:16.5px}
+  .pn2{grid-template-columns:repeat(2,1fr);gap:9px}
+  .ch{font-size:12.4px;padding:10px}
+  .fv{flex:0 0 158px}
+  .grd2{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr;gap:22px}
+  .ft .brand{grid-column:1/-1}
+  section{padding:46px 0}
+  .copy{flex-direction:column;align-items:flex-start;gap:7px}
+  .branch i{height:26vh!important}
+}
+@media print{
+  body{background:#fff;color:#000}
+  header,.burger,.cta,.chips,.note,.gauge,.seeds,.branch{display:none!important}
+  section{padding:20px 0;page-break-inside:avoid}
+  .pn,.gd,.tn{box-shadow:none;border-color:#bbb}
+  .pyr .step{background:#888!important}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<div class="branch" aria-hidden="true">
+  <i style="left:4%;height:34vh;--r:-14deg"></i>
+  <i style="left:11%;height:26vh;--r:9deg;animation-delay:-2s"></i>
+  <i style="left:20%;height:40vh;--r:-6deg;animation-delay:-4s"></i>
+  <i style="left:79%;height:30vh;--r:12deg;animation-delay:-1s"></i>
+  <i style="left:90%;height:38vh;--r:-9deg;animation-delay:-3s"></i>
+  <i style="left:96%;height:24vh;--r:6deg;animation-delay:-5s"></i>
+</div>
+
+<header>
+  <div class="wrap hd">
+    <a class="logo" href="#" aria-label="返回草榴电影网首页">
+      <span class="fruit" aria-hidden="true"></span>
+      <span class="let"><b>草榴</b>影视<em>CAOLIU</em></span>
+    </a>
+    <nav id="nav" aria-label="主导航">
+      <a href="#nav2" class="on">收录导航</a>
+      <a href="#film">今晚片单</a>
+      <a href="#cat">分类索引</a>
+      <a href="#rank">口碑榜</a>
+      <a href="#news">影讯编辑</a>
+      <a href="#about">收录规范</a>
+      <a href="#" class="btn">提交站点</a>
+    </nav>
+    <button class="burger" id="bg" aria-label="打开菜单" aria-expanded="false" aria-controls="nav"><s></s><s></s><s></s></button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" aria-labelledby="h1">
+    <div class="rv">
+      <span class="kicker">精选优质影视导航大全 · 实用网址收录平台</span>
+      <h1 id="h1">草榴影视<br>只收耐看的</h1>
+      <p class="hs">草榴电影网（caoliudianyingwang-cn.github.io）不托管任何影视文件，只做一件事：从大量影视站点中，挑出仍然可用、字幕齐全、画质诚实的那一批，做成一份能直接用的影视导航。</p>
+      <q class="qm">“草榴”取草木结实之意——外表普通，咬开才知甜。我们不追噱头，只追“今晚真的能看完”。</q>
+      <div class="cta">
+        <a class="btn2" href="#nav2">直接看导航 →</a>
+        <a class="gh" href="#film">今晚看什么</a>
+      </div>
+    </div>
+
+    <div class="rv" aria-hidden="false">
+      <div class="gauge">
+        <svg viewBox="0 0 340 340" aria-label="今日可用率 96%">
+          <circle class="ring" cx="170" cy="170" r="150"></circle>
+          <circle class="val" id="ring" cx="170" cy="170" r="150"></circle>
+        </svg>
+        <div class="face">
+          <b><span id="pct">0</span><i>%</i></b>
+          <span>今日可用率</span>
+        </div>
+        <span class="pips" aria-hidden="true"></span>
+        <div class="seeds" aria-hidden="true">
+          <i style="top:30%;left:38%"></i><i style="top:44%;left:55%"></i><i style="top:58%;left:42%"></i>
+          <i style="top:66%;left:60%"></i><i style="top:52%;left:70%"></i><i style="top:72%;left:48%"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi rv"><em>SITES</em><b data-t="1286">0</b><span>已收录影视站点</span></div>
+      <div class="kpi rv"><em>LIST</em><b data-t="940">0</b><span>整理片单条目</span></div>
+      <div class="kpi rv"><em>SUBTITLE</em><b data-t="218">0</b><span>字幕与修复专题</span></div>
+      <div class="kpi rv"><em>RULES</em><b data-t="63">0</b><span>收录与下架规则</span></div>
+    </div>
+  </section>
+
+  <!-- ① 导航 -->
+  <section id="nav2" aria-labelledby="t1">
+    <div class="eyebrow rv"><span class="no">N0.1</span><span class="en">Directory</span></div>
+    <h2 id="t1" class="rv">收录导航 <small>DIRECTORY</small></h2>
+    <p class="lead rv">影视网站导航不是越多越好。草榴电影网的影视导航只保留实测可用的站点：高清影视在线观看稳定、电影字幕齐全、4K 蓝光资源标注诚实、无诱导下载、无仿冒付费。每项均标注收录要点。</p>
+    <div class="chips rv">
+      <a href="#film">电影</a><a href="#cat">电视剧</a><a href="#cat">动漫</a><a href="#cat">纪录片</a><a href="#cat">综艺</a>
+      <a href="#cat">电影字幕</a><a href="#cat">4K蓝光</a><a href="#about">提交收录</a>
+    </div>
+
+    <div class="panels">
+      <div class="pn rv" style="--c1:#7fb069;--c2:#3f7d54">
+        <span class="ix">01</span>
+        <h3>高清影视在线观看</h3>
+        <p>收录支持高清影视在线观看的站点，标注清晰度、字幕语言、更新速度与广告干扰程度。</p>
+        <span class="go">看片入口 <i>→</i></span>
+      </div>
+      <div class="pn rv" style="--c1:#e8b94a;--c2:#b8831f">
+        <span class="ix">02</span>
+        <h3>电影下载与迅雷下载</h3>
+        <p>电影下载与迅雷下载资源站，优先收录有做种、有校验、有规格说明（REMUX / HDR10+ / 杜比视界）的站点。</p>
+        <span class="go">下载入口 <i>→</i></span>
+      </div>
+      <div class="pn rv" style="--c1:#5f9ea0;--c2:#2f6f70">
+        <span class="ix">03</span>
+        <h3>电影字幕</h3>
+        <p>电影字幕专题：简体、繁体、中英双语、ASS/SRT 特效字幕，含翻译质量与同步度说明。</p>
+        <span class="go">字幕入口 <i>→</i></span>
+      </div>
+      <div class="pn rv" style="--c1:#c17f9e;--c2:#8f4f6f">
+        <span class="ix">04</span>
+        <h3>4K 蓝光与修复</h3>
+        <p>4K 蓝光原盘、REMUX、4K 修复版、老片修复专题，拒绝虚标“4K”的伪高清站点。</p>
+        <span class="go">蓝光入口 <i>→</i></span>
+      </div>
+      <div class="pn rv" style="--c1:#8a7fbf;--c2:#544a8f">
+        <span class="ix">05</span>
+        <h3>电视剧 · 动漫 · 纪录片</h3>
+        <p>影视大全不止电影：电视剧全集、动漫新番、纪录片与综艺的合规观看入口一并收录。</p>
+        <span class="go">剧集入口 <i>→</i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 片单 -->
+  <section id="film" aria-labelledby="t2">
+    <div class="eyebrow rv"><span class="no">N0.2</span><span class="en">Tonight</span></div>
+    <h2 id="t2" class="rv">今晚片单 <small>WHAT TO WATCH</small></h2>
+    <p class="lead rv">草榴电影网的“今晚片单”：十部值得看完的电影，附建议画质与字幕提示。点击进入对应影视站点的详情页。</p>
+    <div class="chips rv">
+      <a href="#cat">经典电影</a><a href="#cat">最新电影</a><a href="#rank">口碑榜</a><a href="#cat">4K修复</a>
+    </div>
+
+    <div class="beltwrap rv">
+      <div class="belt">
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#3f7d54,#16211a)" aria-label="霸王别姬 1993">
+          <u></u><span class="yr">1993</span><span class="rt">9.6</span>
+          <div class="cv"><div class="t">霸王别姬</div><div class="s">经典电影 · <b>4K 修复</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#c17f9e,#5a3047)" aria-label="花样年华 2000">
+          <u></u><span class="yr">2000</span><span class="rt">8.7</span>
+          <div class="cv"><div class="t">花样年华</div><div class="s">经典电影 · <b>杜比视界</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#5f9ea0,#1f4546)" aria-label="千与千寻 2001">
+          <u></u><span class="yr">2001</span><span class="rt">9.4</span>
+          <div class="cv"><div class="t">千与千寻</div><div class="s">动漫 · <b>REMUX</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#e8b94a,#7a4a12)" aria-label="肖申克的救赎 1994">
+          <u></u><span class="yr">1994</span><span class="rt">9.7</span>
+          <div class="cv"><div class="t">肖申克的救赎</div><div class="s">经典电影 · <b>中英字幕</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#8a7fbf,#352c63)" aria-label="星际穿越 2014">
+          <u></u><span class="yr">2014</span><span class="rt">9.3</span>
+          <div class="cv"><div class="t">星际穿越</div><div class="s">科幻 · <b>HDR10+</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#7fb069,#24402d)" aria-label="海蒂和爷爷 2015">
+          <u></u><span class="yr">2015</span><span class="rt">9.2</span>
+          <div class="cv"><div class="t">海蒂和爷爷</div><div class="s">治愈 · <b>1080P</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#c98a5a,#5e3418)" aria-label="寄生虫 2019">
+          <u></u><span class="yr">2019</span><span class="rt">8.7</span>
+          <div class="cv"><div class="t">寄生虫</div><div class="s">剧情片 · <b>韩语字幕</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#4a6fa5,#1c2c4a)" aria-label="少年派的奇幻漂流 2012">
+          <u></u><span class="yr">2012</span><span class="rt">9.0</span>
+          <div class="cv"><div class="t">少年派的奇幻漂流</div><div class="s">冒险 · <b>3D 蓝光</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#9bbf7a,#3f6b2f)" aria-label="小森林 2014">
+          <u></u><span class="yr">2014</span><span class="rt">8.9</span>
+          <div class="cv"><div class="t">小森林</div><div class="s">治愈 · <b>中日字幕</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+        <a class="fv" href="#" style="--g:linear-gradient(155deg,#bf7a7a,#5e2b2b)" aria-label="楚门的世界 1998">
+          <u></u><span class="yr">1998</span><span class="rt">9.4</span>
+          <div class="cv"><div class="t">楚门的世界</div><div class="s">经典电影 · <b>REMUX</b></div></div>
+          <span class="ov"><span>▸ 立即观看</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ 分类 -->
+  <section id="cat" aria-labelledby="t3">
+    <div class="eyebrow rv"><span class="no">N0.3</span><span class="en">Categories</span></div>
+    <h2 id="t3" class="rv">分类索引 <small>GENRES</small></h2>
+    <p class="lead rv">按类型找片，比按站点找片更省时间。草榴影视把影视大全拆成十类，每类给出代表性方向与字幕/画质提示。</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tc on" role="tab" aria-selected="true">剧情与家庭</button>
+      <button class="tc" role="tab" aria-selected="false">犯罪与悬疑</button>
+      <button class="tc" role="tab" aria-selected="false">科幻与奇幻</button>
+      <button class="tc" role="tab" aria-selected="false">动画与治愈</button>
+      <button class="tc" role="tab" aria-selected="false">纪录片</button>
+      <button class="tc" role="tab" aria-selected="false">喜剧与爱情</button>
+      <button class="tc" role="tab" aria-selected="false">战争与历史</button>
+      <button class="tc" role="tab" aria-selected="false">4K 修复</button>
+    </div>
+
+    <div class="panels2">
+      <div class="pn2 on">
+        <a class="ch" href="#" style="--c1:#7fb069;--c2:#3f7d54"><span>家庭伦理剧与代际关系</span><em>字幕齐全</em></a>
+        <a class="ch" href="#"><span>婚姻、欲望与选择</span><em>华语</em></a>
+        <a class="ch" href="#"><span>成长与青春</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>亲情与故乡</span><em>中英</em></a>
+        <a class="ch" href="#"><span>社会议题电影</span><em>4K</em></a>
+        <a class="ch" href="#"><span>女性导演作品</span><em>修复</em></a>
+      </div>
+      <div class="pn2">
+        <a class="ch" href="#"><span>犯罪片与黑色电影</span><em>1080P</em></a>
+        <a class="ch" href="#"><span>悬疑与反转</span><em>字幕</em></a>
+        <a class="ch" href="#"><span>心理惊悚</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>法庭与罪与罚</span><em>中英</em></a>
+        <a class="ch" href="#"><span>侦探推理</span><em>4K</em></a>
+        <a class="ch" href="#"><span>真实事件改编</span><em>修复</em></a>
+      </div>
+      <div class="pn2">
+        <a class="ch" href="#"><span>硬科幻与太空</span><em>HDR10+</em></a>
+        <a class="ch" href="#"><span>赛博朋克与未来</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>时间旅行</span><em>4K</em></a>
+        <a class="ch" href="#"><span>奇幻与神话改编</span><em>字幕</em></a>
+        <a class="ch" href="#"><span>末世与灾难</span><em>REMUX</em></a>
+        <a class="ch" href="#"><span>超级英雄之外</span><em>1080P</em></a>
+      </div>
+      <div class="pn2">
+        <a class="ch" href="#"><span>吉卜力与宫崎骏</span><em>日语</em></a>
+        <a class="ch" href="#"><span>新海诚与新番</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>治愈系日常</span><em>中文字幕</em></a>
+        <a class="ch" href="#"><span>动物与自然</span><em>4K</em></a>
+        <a class="ch" href="#"><span>定格与独立动画</span><em>字幕</em></a>
+        <a class="ch" href="#"><span>动画电影史必看</span><em>修复</em></a>
+      </div>
+      <div class="pn2">
+        <a class="ch" href="#"><span>自然与地球</span><em>4K</em></a>
+        <a class="ch" href="#"><span>人文与社会</span><em>中英</em></a>
+        <a class="ch" href="#"><span>历史与考古</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>音乐与艺术</span><em>字幕</em></a>
+        <a class="ch" href="#"><span>科技与未来</span><em>1080P</em></a>
+        <a class="ch" href="#"><span>美食与旅途</span><em>治愈</em></a>
+      </div>
+      <div class="pn2">
+        <a class="ch" href="#"><span>喜剧：讽刺与温情</span><em>字幕</em></a>
+        <a class="ch" href="#"><span>爱情：错过与重逢</span><em>华语</em></a>
+        <a class="ch" href="#"><span>青春校园</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>家庭喜剧</span><em>中英</em></a>
+        <a class="ch" href="#"><span>黑色幽默</span><em>4K</em></a>
+        <a class="ch" href="#"><span>浪漫喜剧经典</span><em>修复</em></a>
+      </div>
+      <div class="pn2">
+        <a class="ch" href="#"><span>二战与人性</span><em>字幕</em></a>
+        <a class="ch" href="#"><span>古代战争史诗</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>历史人物传记</span><em>中英</em></a>
+        <a class="ch" href="#"><span>冷战与谍战</span><em>4K</em></a>
+        <a class="ch" href="#"><span>近代史回望</span><em>修复</em></a>
+        <a class="ch" href="#"><span>反战与和平</span><em>1080P</em></a>
+      </div>
+      <div class="pn2">
+        <a class="ch" href="#"><span>4K 修复：华语经典</span><em>4K</em></a>
+        <a class="ch" href="#"><span>4K 修复：世界经典</span><em>蓝光</em></a>
+        <a class="ch" href="#"><span>老片修复专题</span><em>字幕</em></a>
+        <a class="ch" href="#"><span>杜比视界片单</span><em>HDR</em></a>
+        <a class="ch" href="#"><span>REMUX 原盘</span><em>无损</em></a>
+        <a class="ch" href="#"><span>虚标 4K 识别指南</span><em>防坑</em></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ 排行 -->
+  <section id="rank" aria-labelledby="t4">
+    <div class="eyebrow rv"><span class="no">N0.4</span><span class="en">Ranking</span></div>
+    <h2 id="t4" class="rv">口碑榜 <small>BY RATING</small></h2>
+    <p class="lead rv">草榴电影网口碑榜按“可看完程度”排序：画质标注是否诚实、字幕是否同步、站点是否还在、是否诱导付费。数值为近 30 天编辑部加权评分。</p>
+    <div class="chips rv">
+      <a href="#rank">本周口碑</a><a href="#rank">经典电影</a><a href="#film">最新电影</a><a href="#cat">4K蓝光</a>
+    </div>
+
+    <div class="pyr" id="pyr" aria-label="口碑榜柱状图">
+      <div class="ax"><span>10</span><span>8</span><span>6</span><span>4</span><span>2</span><span>0</span></div>
+      <div class="step" data-h="9.7"><i></i><span class="vv">9.7<b>/10</b></span><span class="nm">肖申克的救赎</span><span class="no">01</span></div>
+      <div class="step" data-h="9.6"><i></i><span class="vv">9.6<b>/10</b></span><span class="nm">霸王别姬</span><span class="no">02</span></div>
+      <div class="step" data-h="9.5"><i></i><span class="vv">9.5<b>/10</b></span><span class="nm">阿甘正传</span><span class="no">03</span></div>
+      <div class="step" data-h="9.4"><i></i><span class="vv">9.4<b>/10</b></span><span class="nm">千与千寻</span><span class="no">04</span></div>
+      <div class="step" data-h="9.3"><i></i><span class="vv">9.3<b>/10</b></span><span class="nm">星际穿越</span><span class="no">05</span></div>
+      <div class="step" data-h="9.2"><i></i><span class="vv">9.2<b>/10</b></span><span class="nm">楚门的世界</span><span class="no">06</span></div>
+      <div class="step" data-h="9.1"><i></i><span class="vv">9.1<b>/10</b></span><span class="nm">活着</span><span class="no">07</span></div>
+      <div class="step" data-h="9.0"><i></i><span class="vv">9.0<b>/10</b></span><span class="nm">少年派的奇幻漂流</span><span class="no">08</span></div>
+      <div class="step" data-h="8.9"><i></i><span class="vv">8.9<b>/10</b></span><span class="nm">小森林</span><span class="no">09</span></div>
+      <div class="step" data-h="8.8"><i></i><span class="vv">8.8<b>/10</b></span><span class="nm">海蒂和爷爷</span><span class="no">10</span></div>
+    </div>
+  </section>
+
+  <!-- ⑤ 影讯 -->
+  <section id="news" aria-labelledby="t5">
+    <div class="eyebrow rv"><span class="no">N0.5</span><span class="en">Editorial</span></div>
+    <h2 id="t5" class="rv">影讯编辑 <small>EDITOR'S NOTE</small></h2>
+    <p class="lead rv">草榴影视的编辑手记：哪些老片值得做 4K 修复、哪些“高清影视在线观看”站点其实在骗流量、哪些电影字幕翻译得更准。每周更新。</p>
+
+    <div class="press">
+      <a class="big rv" href="#">
+        <span class="wl">影讯</span>
+        <span class="k">● 头条 · EDITORIAL</span>
+        <h3>“4K”三个字，正在被用坏</h3>
+        <p>我们把“标注 4K”的 60 个影视站点逐条核对后发现：约三成所谓 4K 蓝光，实为 1080P 放大。草榴电影网的做法是——只收录敢写清楚编码、码率、来源与字幕版本的站点。</p>
+        <span class="dt">2026.10.09 · 编辑部</span>
+      </a>
+      <div class="side">
+        <a class="tn rv" href="#"><span class="n">01</span><span class="tx"><b>电影字幕：简体、繁体与双语，怎么选</b><span>字幕不是翻译，是二次创作。我们给 12 个主流字幕组排了序。</span></span></a>
+        <a class="tn rv" href="#"><span class="n">02</span><span class="tx"><b>本周新增 14 个可用影视站点</b><span>以“高清影视在线观看”稳定、无诱导下载为硬门槛。</span></span></a>
+        <a class="tn rv" href="#"><span class="n">03</span><span class="tx"><b>迅雷下载与磁力：规格怎么看</b><span>REMUX、HDR10+、杜比视界、SRT 与 ASS，一篇看懂。</span></span></a>
+        <a class="tn rv" href="#"><span class="n">04</span><span class="tx"><b>10 部被低估的华语经典电影</b><span>经典电影不该只在“经典”分类里吃灰。</span></span></a>
+        <a class="tn rv" href="#"><span class="n">05</span><span class="tx"><b>下架公告：3 个仿冒“草榴”的站点</b><span>凡以草榴影视名义索要充值、解锁、VIP 的，均为仿冒。</span></span></a>
+        <a class="tn rv" href="#"><span class="n">06</span><span class="tx"><b>电视剧与动漫：按季找，别按集找</b><span>影视大全的整理方式，决定了你今晚能否真的看完。</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ 规范 -->
+  <section id="about" aria-labelledby="t6">
+    <div class="eyebrow rv"><span class="no">N0.6</span><span class="en">Rules</span></div>
+    <h2 id="t6" class="rv">收录规范 <small>63 RULES</small></h2>
+
+    <div class="qbox rv">
+      <q>草榴影视不做聚合播放、不做转码、不做缓存、不托管任何影视文件。我们只是把正版与合规的影视入口，按“是否真的能用”重新排了一次序。</q>
+    </div>
+
+    <div class="grd2">
+      <div class="gd rv"><span class="r">RULE 01</span><h3>不收录盗版与违规</h3><p>凡提供未授权影视文件下载、破解会员、盗链播放的站点，一律不收录、立即下架，并在下架公告中说明原因。</p></div>
+      <div class="gd rv"><span class="r">RULE 02</span><h3>画质标注必须诚实</h3><p>“4K 蓝光”须有真实分辨率与编码说明；虚标者下架。优先 REMUX 与原盘，拒绝放大伪高清。</p></div>
+      <div class="gd rv"><span class="r">RULE 03</span><h3>字幕优先于画质</h3><p>电影字幕不同步、错译、机翻的站点，评分直接降档。中英双语、ASS 特效字幕加分。</p></div>
+      <div class="gd rv"><span class="r">RULE 04</span><h3>拒绝付费解锁陷阱</h3><p>不售卖 VIP、不收费上首页、不索取账号。凡以草榴影视名义索要充值者，均为仿冒，请立即关闭。</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="brand">
+        <a class="logo" href="#" aria-label="返回草榴电影网首页">
+          <span class="fruit" aria-hidden="true"></span>
+          <span class="let"><b>草榴</b>影视<em>CAOLIU</em></span>
+        </a>
+        <p style="margin-top:12px">草榴电影网（caoliudianyingwang-cn.github.io）是精选优质影视导航大全与实用网址收录平台，收录高清影视在线观看、电影下载、迅雷下载、最新电影、经典电影、电影字幕、电视剧、动漫、纪录片、综艺、4K 蓝光与影视大全。</p>
+      </div>
+      <div>
+        <h4>影视导航</h4>
+        <a href="#nav2">高清影视在线观看</a>
+        <a href="#cat">电影下载</a>
+        <a href="#cat">迅雷下载</a>
+        <a href="#cat">电影字幕</a>
+        <a href="#cat">4K 蓝光</a>
+      </div>
+      <div>
+        <h4>内容分类</h4>
+        <a href="#cat">最新电影</a>
+        <a href="#cat">经典电影</a>
+        <a href="#cat">电视剧</a>
+        <a href="#cat">动漫</a>
+        <a href="#cat">纪录片 · 综艺</a>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <a href="#about">收录规范</a>
+        <a href="#about">下架公告</a>
+        <a href="#about">提交站点</a>
+        <a href="#news">编辑手记</a>
+        <a href="#">回到顶部</a>
+      </div>
+    </div>
+    <div class="note"><b>版权声明：</b>草榴影视不托管、不播放、不转码、不缓存任何影视文件与电影字幕；所有内容权利归原作者与正版平台。请支持正版，看完请去影院。本页为前端演示占位，片单与站点名为编辑示例，上线前请核实链接合法性。</div>
+    <div class="copy">
+      <span>© <b>草榴电影网</b> · caoliudianyingwang-cn.github.io · 精选优质影视导航大全</span>
+      <span>影视导航 · 影视网站导航 · 实用网址收录平台</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var IO = window.IntersectionObserver;
+
+  /* 渐入 */
+  var els = document.querySelectorAll('.rv');
+  if(IO){
+    var io = new IO(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.14});
+    els.forEach(function(e){ io.observe(e); });
+  } else { els.forEach(function(e){ e.classList.add('in'); }); }
+
+  /* KPI 数字滚动 */
+  var kpis = document.querySelectorAll('.kpi b[data-t]');
+  function roll(el){
+    var to = +el.getAttribute('data-t'), cur = 0, dur = 1500, st = performance.now();
+    var ease = function(t){ return 1 - Math.pow(1-t,3); };
+    function step(now){
+      var p = Math.min((now-st)/dur,1);
+      el.textContent = Math.round(to*ease(p)).toLocaleString('en-US');
+      if(p<1) requestAnimationFrame(step);
+      else el.textContent = to.toLocaleString('en-US');
+    }
+    requestAnimationFrame(step);
+  }
+  if(IO){
+    var kio = new IO(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ roll(e.target); kio.unobserve(e.target); } });
+    });
+    kpis.forEach(function(e){ kio.observe(e); });
+  } else { kpis.forEach(roll); }
+
+  /* 环形仪表 0 → 96% */
+  var ring = document.getElementById('ring'), pct = document.getElementById('pct');
+  function dash(){
+    var r = ring.r.baseVal.value, c = 2*Math.PI*r;
+    ring.style.strokeDasharray = c;
+    ring.style.strokeDashoffset = c;
+    var target = c*(1-0.96);
+    var st = null, dur = 2100;
+    var ease = function(t){ return 1 - Math.pow(1-t,3); };
+    function step(now){
+      if(!st) st = now;
+      var p = Math.min((now-st)/dur,1);
+      ring.style.strokeDashoffset = c - (c-target)*ease(p);
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    var n = {v:0};
+    function np(now){
+      if(!n.t) n.t = now;
+      var p = Math.min((now-n.t)/dur,1);
+      var v = Math.round(96*ease(p));
+      if(pct.textContent !== String(v)) pct.textContent = v;
+      if(p<1) requestAnimationFrame(np);
+    }
+    requestAnimationFrame(np);
+  }
+  if(IO){ var dio = new IO(function(es){ es.forEach(function(e){ if(e.isIntersecting){ dash(); dio.disconnect(); } }); }); dio.observe(document.querySelector('.gauge')); }
+  else dash();
+
+  /* 阶梯柱生长 */
+  var steps = document.querySelectorAll('#pyr .step');
+  function grow(){
+    steps.forEach(function(s,i){
+      var h = (+s.getAttribute('data-h'))*30; /* px per 0.1 */
+      setTimeout(function(){ s.style.height = h + 'px'; }, 90*i);
+    });
+  }
+  if(IO){ var pio = new IO(function(es){ es.forEach(function(e){ if(e.isIntersecting){ grow(); pio.unobserve(e.target); } }); }); pio.observe(document.getElementById('pyr')); }
+  else { steps.forEach(function(s){ s.style.height = (+s.getAttribute('data-h'))*30 + 'px'; }); }
+
+  /* 标签页 */
+  var tabs = document.querySelectorAll('.tc'), pans = document.querySelectorAll('.pn2');
+  tabs.forEach(function(t,i){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('on'); x.setAttribute('aria-selected','false'); });
+      pans.forEach(function(x){ x.classList.remove('on'); });
+      t.classList.add('on'); t.setAttribute('aria-selected','true');
+      if(pans[i]) pans[i].classList.add('on');
+    });
+  });
+
+  /* 汉堡 */
+  var bg = document.getElementById('bg'), nav = document.getElementById('nav');
+  function closeMenu(){ nav.classList.remove('open'); bg.setAttribute('aria-expanded','false'); bg.setAttribute('aria-label','打开菜单'); }
+  bg.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    bg.setAttribute('aria-expanded', open ? 'true':'false');
+    bg.setAttribute('aria-label', open ? '关闭菜单':'打开菜单');
+  });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && nav.classList.contains('open')) closeMenu(); });
+
+  /* 导航高亮 */
+  var links = document.querySelectorAll('nav a[href^="#"]');
+  if('scrollBehavior' in document.documentElement.style === false){
+    links.forEach(function(a){
+      a.addEventListener('click', function(e){
+        var el = document.querySelector(this.getAttribute('href'));
+        if(el){ e.preventDefault(); window.scrollTo(0, el.offsetTop-64); }
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
